@@ -1,0 +1,77 @@
+#N canvas 202 78 716 549 10;
+#X obj 283 374 cnv 15 110 59 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 129 93 cnv 15 140 221 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 166 129 moonlib/mknob 25 100 0.1 100 1 0 empty empty empty -2
+-6 0 8 -191407 -1 -1 6600 1;
+#X floatatom 166 158 5 0 0 0 - - -, f 5;
+#X text 164 113 Rate;
+#X obj 139 196 moonlib/mknob 25 100 0 50 0 0 empty empty empty -2 -6
+0 8 -191407 -1 -1 0 1;
+#X floatatom 139 225 5 0 0 0 - - -, f 5;
+#X text 137 180 Pitch Amt;
+#X obj 139 263 moonlib/mknob 25 200 0 1000 0 0 empty empty empty -2
+-6 0 8 -191407 -1 -1 0 1;
+#X floatatom 139 292 5 0 0 0 - - -, f 5;
+#X text 137 247 Filter Amt;
+#X obj 216 263 moonlib/mknob 25 100 0 1 0 0 empty empty empty -2 -6
+0 8 -191407 -1 -1 0 1;
+#X floatatom 216 292 5 0 0 0 - - -, f 5;
+#X text 214 247 Amp Amt;
+#X floatatom 331 273 5 0 0 0 - - -, f 5;
+#X obj 216 162 vradio 15 0 0 5 empty empty empty 0 -8 0 10 -237178
+-1 -1 0;
+#X text 232 160 Sin;
+#X text 232 175 Tri;
+#X text 232 191 Sq;
+#X text 232 206 Saw;
+#X text 232 221 Noise;
+#X obj 129 93 cnv 15 140 15 empty empty empty 20 12 0 14 -137314 -66577
+0;
+#X text 188 92 LFO;
+#X obj 214 138 bng 8 50 30 0 empty empty empty 17 7 0 10 -183213 -159401
+-1;
+#X obj 41 111 metro 1000;
+#X floatatom 164 52 5 0 0 0 - - -, f 5;
+#X obj 98 23 expr 1000/$f1;
+#X obj 339 188 osc_select~;
+#X msg 35 78 1;
+#X floatatom 377 451 5 0 0 0 - - -, f 5;
+#X text 285 378 Normalizes AM out;
+#X obj 302 401 expr $f1 + 1;
+#X obj 160 402 outlet~;
+#X obj 233 455 outlet~;
+#X obj 160 370 *~ 0;
+#X obj 90 402 outlet~;
+#X obj 233 395 +~ 1;
+#X obj 233 427 /~ 1;
+#X obj 233 370 *~ 0;
+#X obj 90 370 *~ 0;
+#X connect 2 0 3 0;
+#X connect 3 0 26 0;
+#X connect 3 0 27 0;
+#X connect 3 0 28 0;
+#X connect 5 0 6 0;
+#X connect 6 0 39 1;
+#X connect 8 0 9 0;
+#X connect 9 0 34 1;
+#X connect 11 0 12 0;
+#X connect 12 0 31 0;
+#X connect 12 0 38 1;
+#X connect 15 0 14 0;
+#X connect 15 0 27 1;
+#X connect 24 0 23 0;
+#X connect 26 0 24 1;
+#X connect 26 0 25 0;
+#X connect 27 0 34 0;
+#X connect 27 0 38 0;
+#X connect 27 0 39 0;
+#X connect 28 0 24 0;
+#X connect 31 0 37 1;
+#X connect 34 0 32 0;
+#X connect 36 0 37 0;
+#X connect 37 0 33 0;
+#X connect 38 0 36 0;
+#X connect 39 0 35 0;
+#X coords 0 -1 1 1 142 227 1 128 90;

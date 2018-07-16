@@ -1,0 +1,15 @@
+#N canvas 223 23 470 298 10;
+#X obj 178 24 notein;
+#X obj 178 58 mtof;
+#X floatatom 223 85 5 0 0 0 - - -;
+#X floatatom 178 85 5 0 0 0 - - -;
+#X text 261 85 velocity;
+#X text 117 85 frequency;
+#X obj 178 110 pack f f;
+#X obj 178 146 outlet;
+#X connect 0 0 1 0;
+#X connect 0 1 2 0;
+#X connect 1 0 3 0;
+#X connect 2 0 6 1;
+#X connect 3 0 6 0;
+#X connect 6 0 7 0;
